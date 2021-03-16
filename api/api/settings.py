@@ -61,7 +61,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'admins',
-    'api_keys'
+    'api_keys',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -169,6 +170,10 @@ EMAIL_SENDER_NAME = env('EMAIL_SENDER_NAME')
 
 FRONTEND_URL = env('FRONTEND_URL')
 BASE_URL = env('BASE_URL')
+
+ARGYLE_API_URL = env('ARGYLE_API_URL')
+SANDBOX_ARGYLE_API_URL = env('SANDBOX_ARGYLE_API_URL')
+
 
 USE_X_FORWARDED_HOST = env("USE_X_FORWARDED_HOST")
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

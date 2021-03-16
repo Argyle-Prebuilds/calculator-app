@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-
+    'admins',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +144,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+AUTH_USER_MODEL = 'admins.AdminUser'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

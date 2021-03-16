@@ -19,3 +19,10 @@ export const PAGINATION_INITIAL_STATE = {
 }
 
 export const PAGE_LIMIT = 3
+
+export const API_KEYS_INITIAL_STATE = {
+  client_id: '',
+  client_secret: '',
+  plugin_key: '',
+  is_sandbox_mode: false
+}

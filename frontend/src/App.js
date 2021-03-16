@@ -11,6 +11,7 @@ import {AdminUserList} from "./components/adminList/AdminUserList";
 import {LeftNavBar} from "./components/navbar/LeftNavBar";
 import {AccountActivate} from "./components/auth/AccountActivate";
 import {LandingPage} from "./components/home/LandingPage";
+import {ArgyleAPIKeys} from "./components/apiKeys/ArgyleAPIKeys";
 
 
 const RouteComponent = ({
@@ -43,6 +44,9 @@ const App = () => {
           </RouteComponent>
           <RouteComponent displayNav={true} path="/accounts/">
             <AdminUserList/>
+          </RouteComponent>
+          <RouteComponent displayNav={true} path="/api-keys/">
+            <ArgyleAPIKeys/>
           </RouteComponent>
           <RouteComponent validateToken={false}
                           path="/auth/login/">

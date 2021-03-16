@@ -1,0 +1,47 @@
+@import "styles.css";
+
+.paper-child-container {
+  padding: 0 20px 20px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.add-key-button {
+  align-self: flex-end;
+  margin: 0 0 15px 0;
+  padding: 0;
+  position: relative;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-key-pair-btn {
+  margin: 15px 0 0 0;
+}
+
+.action-button {
+  color: var(--dark-grey-color)
+}
+
+.MuiInput-underline.Mui-disabled:before {
+  border-bottom-style: none !important;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-key-pair-btn {
+  margin: 15px 0 0 0;
+}
+
+.PrivateSwitchBase-input-4.MuiSwitch-input.switch-color {
+  color: var(--blue-color) !important;
+}

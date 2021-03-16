@@ -13,6 +13,7 @@ import {AccountActivate} from "./components/auth/AccountActivate";
 import {LandingPage} from "./components/home/LandingPage";
 import {ArgyleAPIKeys} from "./components/apiKeys/ArgyleAPIKeys";
 import {UsersList} from "./components/users/UsersList";
+import {DetailsView} from "./components/details/DetailsView";
 
 
 const RouteComponent = ({
@@ -51,6 +52,9 @@ const App = () => {
           </RouteComponent>
           <RouteComponent displayNav={true} path="/api-keys/">
             <ArgyleAPIKeys/>
+          </RouteComponent>
+          <RouteComponent path="/details/:argyle_id" exact>
+            <DetailsView/>
           </RouteComponent>
           <RouteComponent validateToken={false}
                           path="/auth/login/">

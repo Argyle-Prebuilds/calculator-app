@@ -1,0 +1,346 @@
+body {
+  background-color: #eff1f5;
+  font-family: Roboto, Helvetica, Arial;
+}
+
+.page-content-wrapper {
+  margin-left: 250px;
+}
+
+.spinner-container {
+  height: 40px; /* prevents vertical expansion when CircularProgress component is rendered inside */
+}
+
+.center-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff !important;
+  box-sizing: border-box;
+  min-height: 60px;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.basic-container {
+  position: relative;
+  background-color: #ffffff !important;
+  box-sizing: border-box;
+  line-height: 50px; /* Must equal height to center vertically */
+  min-height: 50px;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.small-container {
+  height: 60px;
+  line-height: 60px;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-icon-container {
+  position: relative;
+  background-color: #eff1f5;
+  margin-right: 24px;
+  height: 60px;
+  width: 50px;
+  float: left;
+  line-height: initial;
+}
+
+.cursor-btn {
+  cursor: pointer;
+}
+
+.back-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.padding-v-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.height-0 {
+  height: 0;
+}
+
+
+.width-100 {
+  width: 100%
+}
+
+.large-paper-container {
+  padding: 20px;
+  margin: 20px 10px;
+
+}
+
+.medium-paper-container {
+  width: 924px;
+  padding: 20px 40px 5px 40px;
+  margin: 40px auto;
+
+}
+
+.table-container {
+  margin: 30px 0;
+
+}
+
+.table-row:hover {
+  background: #f4f4f4;
+  cursor: pointer;
+}
+
+.table-row:last-child {
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.users-table-head {
+  padding: 22px 16px !important;
+  font-weight: bold !important;
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.float-right {
+  float: right;
+}
+
+.column {
+  padding: 10px 10px 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  align-self: flex-end;
+}
+
+.MuiFormControl-root.input-container {
+  margin-bottom: 30px;
+  width: 80% !important;
+}
+
+.MuiDialogTitle-root.dialog-title {
+  text-align: center;
+  padding-top: 0;
+}
+
+.MuiDialogTitle-root.dialog-title .MuiTypography-h6 {
+  font-weight: bold;
+}
+
+.MuiDialogTitle-root.dialog-title.red-title .MuiTypography-h6 {
+  font-weight: bold;
+  color: red !important;
+}
+
+button {
+  text-transform: none !important;
+}
+
+.MuiButton-contained.blue-button {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.MuiButton-contained.alternate-blue-btn, .MuiButton-contained.alternate-blue-btn:hover {
+  color: var(--blue-color);
+  background: #eef2fc;
+
+}
+
+.MuiButton-contained.red-button {
+  background-color: red;
+}
+
+.MuiButton-contained.alternate-red-btn, .MuiButton-contained.alternate-red-btn:hover {
+  color: red;
+  background: #fbebec;
+
+}
+
+.full-width-input {
+  width: 85%;
+}
+
+
+.medium-width-input {
+  width: 80%;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+
+.medium-width-modal {
+  width: 550px !important;
+  margin: auto;
+  padding-bottom: 0;
+}
+
+.padding-left-0 {
+  padding-left: 0 !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
+}
+
+.padding-top-7 {
+  padding-top: 7px;
+}
+
+.MuiTooltip-popper {
+  top: 25px !important
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.textfield-block {
+  width: 100%;
+  margin: auto;
+}
+
+.right-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.padded-input {
+  padding: 10px 0;
+  width: 100%;
+}
+
+
+/*homepage styles*/
+
+.homepage-container {
+  margin: 80px auto;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(239, 241, 245);
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  background: rgb(36, 36, 36);
+  border-radius: 100px;
+  width: 125px;
+  height: 125px;
+  margin: -50px 0 0 0;
+  z-index: 1;
+}
+
+.under-logo {
+  margin-top: -40px;
+}
+
+.inline-boxes-container {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.inline-boxes-container > .shadowed-box {
+  width: 201px;
+  padding-bottom: 0;
+}
+
+.shadowed-box {
+  box-shadow: rgb(61 77 108 / 10%) 0px 1rem 2rem 0px;
+  padding: 22px 20px 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.box-header.MuiTypography-h5 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.box-text.MuiTypography-h6 {
+  font-size: 16px;
+  margin: 20px 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+}
+
+.box-divider.MuiDivider-root {
+  margin: 10px 0 0 0;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.homepage-login-btn.MuiButton-contained {
+  background-color: #4c7cda;
+  text-transform: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 20px !important;
+}
+
+.no-keys-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 522px) {
+  .inline-boxes-container > .shadowed-box {
+    width: 100%;
+  }
+
+  .under-logo {
+    padding-top: 50px;
+    text-align: center;
+  }
+}

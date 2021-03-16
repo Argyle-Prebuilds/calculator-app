@@ -1,0 +1,47 @@
+.card-auth {
+  border: none;
+  width: 350px;
+  margin: auto;
+  padding: 25px 30px;
+}
+
+.margin-top-25 {
+  margin-top: 25px !important;
+}
+
+.MuiSvgIcon-root.login-icon {
+  margin: auto;
+  display: block;
+  width: 75px;
+  height: 75px;
+  color: var(--blue-color);
+  box-shadow: 0 0 0 0 10px black;
+}
+
+.link-disable-visited:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.link-color {
+  color: black;
+  text-decoration: none;
+}
+
+.link-color:hover {
+  text-decoration: underline;
+}
+
+.blue-btn {
+  background-color: var(--blue-color) !important;
+  text-transform: none !important;
+  color: white !important;
+}
+
+.grey-font {
+  color: #AAAAAA;
+}
+
+.input-container {
+  width: initial !important;
+}

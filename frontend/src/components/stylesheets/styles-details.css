@@ -1,0 +1,100 @@
+.font-bold {
+  font-weight: bold !important;
+}
+
+.font-size-mini {
+  font-size: 12px;
+}
+
+.font-size-large {
+  font-size: 24px;
+}
+
+.vertical-squeeze {
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+}
+
+.spacing {
+  margin-left: 25px;
+}
+
+.arrow-cell {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+.arrow-icon {
+  width: 20px;
+}
+
+.collapsable-table-container tr.MuiTableRow-root td {
+  background-color: #eff1f5;
+}
+
+tr.MuiTableRow-root:last-child td {
+  border-bottom: none !important;
+}
+
+.small-table-head, .small-table-row {
+  padding: 16px !important;
+}
+
+.small-table-head:first-child, .small-table-row:first-child {
+  padding-left: 0 !important;
+}
+
+.small-table-head, .small-table-row {
+  font-size: 14px !important;
+}
+
+.smaller-font {
+  font-size: 14px !important;
+}
+
+.padding-left-20 {
+  padding-left: 20px !important;
+}
+
+.padding-left-35 {
+  padding-left: 35px !important;
+}
+
+.container-title {
+  padding: 20px 0;
+}
+
+.expand-col {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-row {
+  cursor: pointer;
+}
+
+.grey-background {
+  background-color: #f9f9f9;
+  overflow: hidden !important;
+}
+
+.details-container {
+  padding: 10px;
+}
+
+.loader-div {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}

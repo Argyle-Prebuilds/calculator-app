@@ -1,0 +1,40 @@
+.topbar {
+  background-color: #3f51b5 !important;
+}
+
+.topbar-title {
+  flex-grow: 1;
+}
+
+.left-menu {
+  background: white;
+  height: auto;
+}
+
+.navbar-link {
+  padding: 10px 30px 10px 15px;
+  text-decoration: none;
+  color: gray;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.navbar-link.active {
+  color: black;
+}
+
+.menu-container.MuiList-root {
+  margin-top: 35px;
+  width: 11vw;
+}
+
+.padded-divider.MuiDivider-root {
+  margin: 0 15px;
+}
+
+#navbar {
+  width: 100%;
+  background-color: white;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}

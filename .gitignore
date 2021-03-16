@@ -11,3 +11,4 @@ mediafiles/
 media/
 node_modules/
 tools/env/.env
+/frontend/package-lock.json

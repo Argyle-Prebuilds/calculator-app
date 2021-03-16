@@ -10,6 +10,7 @@ import './components/stylesheets/styles-global.css'
 import {AdminUserList} from "./components/adminList/AdminUserList";
 import {LeftNavBar} from "./components/navbar/LeftNavBar";
 import {AccountActivate} from "./components/auth/AccountActivate";
+import {LandingPage} from "./components/home/LandingPage";
 
 
 const RouteComponent = ({
@@ -37,6 +38,9 @@ const App = () => {
       <ReactNotification/>
       <Router>
         <Switch>
+          <RouteComponent path="/" exact>
+            <LandingPage/>
+          </RouteComponent>
           <RouteComponent displayNav={true} path="/accounts/">
             <AdminUserList/>
           </RouteComponent>

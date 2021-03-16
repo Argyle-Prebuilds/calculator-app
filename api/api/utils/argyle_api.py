@@ -2,11 +2,11 @@ import base64
 import os
 
 import requests
+
+from api import settings
 from api.utils.exceptions import ArgyleException
 from api.utils.exceptions import ArgyleIntegration
 from api_keys.models import ArgyleAPIKeys
-
-from api import settings
 
 BASE_URL = os.environ['BASE_URL']
 
@@ -61,3 +61,124 @@ class ArgyleAPIWrapper:
             return data['results'][0]
 
         return None
+
+    def _get_merged_results_from_url(self, url, params, limit=100):
+        """
+            Because a Payouts endpoint gives us paginated list, we need to fetch for all existing pages
+        """
+
+        results = []
+        exist_next_page = True
+        offset = 0
+
+        while exist_next_page:
+
+            response = requests.get(url, headers=self.get_headers(), params={**params, 'limit': limit,
+                                                                             'offset': offset})
+            data = response.json()
+
+            if response.status_code == 400:
+                raise ArgyleException()
+
+            if 'detail' in data:
+                raise ArgyleException(data['detail'])
+
+            results += data['results']
+            exist_next_page = bool(data["next"])
+            offset += limit
+
+        return results
+
+    def get_all_payouts_by_company_and_date(self, user_id, from_start_date=None, to_start_date=None, employer=None,
+                                            limit=100):
+        """
+        Lists all payouts.
+
+        @param user_id: str, user_id
+        @param from_start_date: str, The timestamp the payouts should be retrieved from
+        @param to_start_date: str, The timestamp the payouts should be retrieved from
+        @param employer: str, The payouts employer
+        @param limit: str, The number of payouts objects to be returned. The default is 10.
+        @return:
+
+        """
+        url = get_argyle_api_url() + '/payouts'
+
+        params = {
+            'user': str(user_id),
+            'from_start_date': str(from_start_date) if from_start_date else None,
+            'to_start_date': str(to_start_date) if to_start_date else None,
+        }
+
+        results = self._get_merged_results_from_url(url, params)
+        # Needed filter by company:
+        results = filter(lambda result: result['employer'] == employer, results)
+
+        return results
+
+    def get_all_payouts(self, user_id, from_start_date=None, to_start_date=None):
+        """
+        Lists all payouts.
+
+        @param user_id: str, user_id
+        @param from_start_date: str, The timestamp the payouts should be retrieved from
+        @param to_start_date: str, The timestamp the payouts should be retrieved from
+        @param limit: str, The number of payouts objects to be returned. The default is 10.
+        @return:
+
+        """
+        url = get_argyle_api_url() + '/payouts'
+
+        params = {
+            'user': str(user_id),
+            'from_start_date': str(from_start_date),
+            'to_start_date': str(to_start_date),
+        }
+        results = self._get_merged_results_from_url(url, params)
+
+        return results
+
+    def get_all_employments(self, user_id):
+        """
+        Lists all employments.
+
+        @param offset: int
+        @param user_id: str, user_id
+        @param limit: int, The number of employments objects to be returned. The default is 10.
+        @return:
+
+        """
+        url = get_argyle_api_url() + '/employments'
+
+        params = {
+            'user': str(user_id),
+        }
+
+        results = self._get_merged_results_from_url(url, params)
+
+        return results
+
+    def get_employments(self, user_id, offset=0, limit=10):
+        """
+        Lists all employments.
+
+        @param offset: int
+        @param user_id: str, user_id
+        @param limit: int, The number of employments objects to be returned. The default is 10.
+        @return:
+
+        """
+        url = get_argyle_api_url() + '/employments'
+
+        params = {
+            'user': str(user_id),
+            'limit': limit,
+            'offset': offset
+        }
+        response = requests.get(url, headers=self.get_headers(), params=params)
+        data = response.json()
+
+        if 'detail' in data:
+            raise ArgyleException(data['detail'])
+
+        return data

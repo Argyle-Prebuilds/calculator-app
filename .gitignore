@@ -1,0 +1,13 @@
+/.idea
+/.DS_Store
+frontend/.idea
+frontend/.eslintcache
+api/.idea
+api/static/*
+*.pyc
+api/api/.idea/
+api/logos
+mediafiles/
+media/
+node_modules/
+tools/env/.env

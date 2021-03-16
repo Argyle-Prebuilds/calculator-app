@@ -1,0 +1,40 @@
+version: "3.7"
+
+x-app-common: &app-common
+  build:
+    context: .
+    dockerfile: tools/docker/api/Dockerfile
+  env_file: ./tools/env/.env
+  depends_on:
+    - db
+  volumes:
+    - ./api:/app
+    - ./tools/docker/api/entrypoint.sh:/entrypoint.sh
+
+services:
+  api:
+    <<: *app-common
+    entrypoint: /entrypoint.sh
+    ports:
+      - "8000:8000"
+    environment:
+      - ALLOWED_HOSTS=*
+    restart: on-failure
+
+  cli:
+    <<: *app-common
+    command: echo "Starting cli container..."
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: <postgres_user>
+      POSTGRES_PASSWORD: <postgress_password>
+      POSTGRES_DB: <database_name>
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

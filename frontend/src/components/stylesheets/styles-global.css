@@ -100,7 +100,7 @@ body {
 }
 
 .table-container {
-  margin: 30px 0;
+  margin: 10px 0;
 
 }
 
@@ -343,4 +343,8 @@ button {
     padding-top: 50px;
     text-align: center;
   }
+}
+
+.users-table > .MuiTableCell-root.MuiTableCell-body{
+  padding: 0 16px !important;
 }

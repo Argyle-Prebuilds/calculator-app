@@ -40,7 +40,7 @@ export const DetailsView = () => {
       history.push("/users/")
 
       if (error?.response?.status === 404) {
-        renderNotification('Not found.', 'error');
+        renderNotification('No data.', 'error');
         history.push("/users/")
         return
       }

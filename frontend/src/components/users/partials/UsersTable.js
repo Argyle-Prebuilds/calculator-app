@@ -54,7 +54,7 @@ export const UsersTable = ({
       <TableBody>
         {data.map(element => {
           return (
-            <TableRow key={element.argyle_id} onClick={() => showUserDetails(element.argyle_id)} className='table-row'>
+            <TableRow key={element.argyle_id} onClick={() => showUserDetails(element.argyle_id)} className='table-row users-table'>
               <TableCell>{element.full_name}</TableCell>
               <TableCell>{element.token_status}</TableCell>
               <TableCell align="right">

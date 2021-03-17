@@ -128,7 +128,7 @@ export const AdminUserList = () => {
         <TableBody>
           {userList.map((elem) => {
             return (
-              <TableRow key={elem.email}>
+              <TableRow key={elem.email} className={"users-table"}>
                 <TableCell>{elem.email}</TableCell>
                 {elem.is_active ?
                   <TableCell className="text-green">Active</TableCell>
@@ -136,10 +136,10 @@ export const AdminUserList = () => {
                 }
 
                 <TableCell align="right">
-                  {logged_in_user_id !== elem.id &&
                   <IconButton
                     variant="text"
                     className="delete-btn"
+                    disabled={logged_in_user_id === elem.id}
                     onClick={() => {
                       setConfirmationOpen(true);
                       setSelectedUser(elem);
@@ -147,7 +147,7 @@ export const AdminUserList = () => {
                   >
                     <DeleteIcon/>
                   </IconButton>
-                  }
+
                 </TableCell>
               </TableRow>
             );
@@ -172,7 +172,7 @@ export const AdminUserList = () => {
   return (
     <Paper className="medium-paper-container">
       <div>
-        <div className={"right-flex-container margin-bottom-25"}>
+        <div className={"right-flex-container"}>
           <Button
             className="blue-btn add-user-btn "
             variant="contained"

@@ -42,7 +42,7 @@ export const AdminUserList = () => {
   const [loading, setLoading] = useState(false)
   const [page, setPage] = useState(0)
   const [paginationState, setPaginationState] = useState(PAGINATION_INITIAL_STATE)
-  const logged_in_user_id = localStorage.getItem('user_id')
+  const logged_in_user_id = localStorage.getItem('user')
 
   const loadNextPage = () => {
     fetchUsers(paginationState.next)

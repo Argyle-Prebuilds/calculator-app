@@ -60,7 +60,7 @@ class ArgyleAPIWrapper:
         if 'results' in data and len(data['results']):
             return data['results'][0]
 
-        return None
+        raise ArgyleNoDataException()
 
     def _get_merged_results_from_url(self, url, params, limit=100):
         """

@@ -96,12 +96,11 @@ class MetricsService:
 
         for key, _ in ALL_KEYS:
             result[key] = {
-                'last_year_total': last_year_total[key],
-                "ytd_total": ytd_total[key],
-                "projected_total": projected_total[key],
-                "companies": companies_metrics[key]
+                'last_year_total': last_year_total[key] if key in last_year_total else 0,
+                "ytd_total": ytd_total[key] if key in ytd_total else 0,
+                "projected_total": projected_total[key] if key in projected_total else 0,
+                "companies": companies_metrics[key] if key in companies_metrics else []
             }
-
         return result
 
     def _get_value(self, key: str, data):
@@ -196,6 +195,9 @@ class MetricsService:
                 last_year_total[key] = default
                 ytd_total[key] = default
                 projected_total[key] = default
+
+            if key not in companies_metrics:
+                continue
 
             metrics = companies_metrics[key]
 

@@ -226,6 +226,20 @@ class MetricsTest(TestCase):
     def setUp(self) -> None:
         self.admin = AdminUser.objects.create()
 
+    def test_empty_payouts_key_metrics(self):
+        with freeze_time("2021-01-28"):
+            metrics_service = MetricsService(last_year_payouts=[],
+                                             current_year_payouts=[], employments=[])
+
+            metrics = metrics_service.get_metrics()
+
+        self.assertEqual(metrics['gross_pay'], {
+            'last_year_total': Decimal('0'),
+            'ytd_total': Decimal('0'),
+            'projected_total': Decimal('0'),
+            'companies': []
+        })
+
     def test_company_key_metrics(self):
         employments = (
             {

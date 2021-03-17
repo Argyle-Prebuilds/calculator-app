@@ -1,4 +1,4 @@
-# calculator-app
+# Calculator App
 
 Add users, visualize their income and employment history, project future income, and conduct calculations on their data.
 
@@ -14,6 +14,23 @@ Add users, visualize their income and employment history, project future income,
 * [Extra](#extra)
 
 ## Demo
+* **User Details**
+
+![User Details](https://user-images.githubusercontent.com/22115481/111464282-2358f580-8753-11eb-8a06-44bc05b0c5ff.gif)
+
+<img width="1043" alt="chart" src="https://user-images.githubusercontent.com/22115481/111459480-4da7b480-874d-11eb-8a29-a73b281c3382.png">
+
+* **API Keys**
+
+![API Keys](https://user-images.githubusercontent.com/22115481/111464729-c01b9300-8753-11eb-9a47-90548fec85dd.gif)
+
+* **User List**
+
+![User List](https://user-images.githubusercontent.com/22115481/111461529-e3444380-874f-11eb-87e9-db275aae4f26.gif)
+
+* **Landing and Login pages**
+
+![Login](https://user-images.githubusercontent.com/22115481/111463533-4040f900-8752-11eb-856e-55f6cc7d2917.gif)
 
 ## Structure
 
